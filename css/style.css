@@ -30,6 +30,13 @@ button, strong {
 h1 {
     background-color: #3F51B5;
     color: white;
+    font-size: x-large;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    height: 70px;
+    line-height: 70px; 
+    padding-left: 70px;
+      
 }
 
 
@@ -41,6 +48,8 @@ ul {
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    margin-top: 70px;
+    margin-bottom: 0px;
 }
 
 li {
@@ -72,6 +81,7 @@ li img {
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+
 }
 
 /* #4 add styles to #tab-bar #buttons */
@@ -110,6 +120,8 @@ li img {
 
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
+    position: relative;
+    top: 70px;
 }
 
 
@@ -143,3 +155,52 @@ li img {
     margin-left: 17.5%;
 }
 
+
+
+/* DESIGN OF NEW LAYOUTS FOR OUR CHATTER APP */
+
+
+
+/* LEFT Layout OF Channel area */
+#channels {
+/*for the */
+    position: absolute;
+    width: 40%;
+    right: 60%;
+    height: 100%;
+    overflow: auto; 
+}
+
+ h1 img {
+/* for the channel list app bar icon */
+    position: absolute;
+    right: 15px;
+    left: 15px;
+    top: 15px;
+}
+
+#channels h1 {
+/* for channels app bar*/
+    position: fixed;
+    width: 100%;
+}
+
+
+
+/* RIGHT Layout OF Chats area */
+#chat {
+/* for the chat area layout*/
+    position: absolute;
+    left: 40%;
+    width: 60%;
+    height: 100%;
+    
+}
+
+#chat h1 {
+/* for right app bar */
+padding-left: 20px;
+padding-right: 20px;
+ width: 100%;
+ position: fixed;
+}
