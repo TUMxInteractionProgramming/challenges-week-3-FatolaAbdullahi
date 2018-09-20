@@ -54,12 +54,12 @@ ul {
 
 li {
     /* #4 #channel #tile geometry */
-    box-sizing: border-box;
+    box-sizing: content-box;
     height: 48px;
-    padding: 16px;
+    line-height: 48px;
     font-size: 16px;
     /* #4 #channel tiles are separated by #lines */
-    border-bottom: 1px solid #F5F5F5;
+    border-bottom: 1px solid #F5F5F5; 
 }
 
 /* #4 active #channel is #highlighted */
@@ -68,21 +68,6 @@ li.selected {
     border-left: 4px solid #3F51B5;
 }
 
-li img {
-    /* #4 #middle vertical alignment of icons in the #channels list */
-    vertical-align: middle;
-}
-
-/* TAB BAR */
-
-/* #4 #sweat #tab-bar */
-#tab-bar {
-    /* #3 #tab-bar #container should be white */
-    background-color: white;
-    /* #3 #tab-bar #container has all buttons centered */
-    text-align: center;
-
-}
 
 /* #4 add styles to #tab-bar #buttons */
 #tab-bar button {
@@ -159,8 +144,6 @@ li img {
 
 /* DESIGN OF NEW LAYOUTS FOR OUR CHATTER APP */
 
-
-
 /* LEFT Layout OF Channel area */
 #channels {
 /*for the */
@@ -185,6 +168,14 @@ li img {
     width: 100%;
 }
 
+.channel-meta {
+    /* #middle vertical alignment of icons in the #channels list */
+    position: absolute;
+    right: 8px;
+    vertical-align: middle;
+    display: inline;
+    margin: 0px;
+}
 
 
 /* RIGHT Layout OF Chats area */
@@ -194,7 +185,7 @@ li img {
     left: 40%;
     width: 60%;
     height: 100%;
-    
+    overflow: auto;
 }
 
 #chat h1 {
@@ -203,4 +194,56 @@ padding-left: 20px;
 padding-right: 20px;
  width: 100%;
  position: fixed;
+}
+
+.message button {
+/*Placing message time left button on right with position*/
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    display: inline;
+}
+
+.message h3 {
+/* to display metadata evenly and aligned to bottom*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1;   
+}
+
+.message a{
+/* creating a column for locations*/
+    width: 33%;
+}
+
+.message em {
+/* creating a column for time left*/
+    width: 33%;
+    text-align: right;
+}
+
+/* TAB BAR */
+
+
+/* #4 #sweat #tab-bar */
+#tab-bar, #chat-bar {
+    /* #3 #tab-bar #container should be white */
+    background-color: white;
+    /* #3 #tab-bar #container has all buttons centered */
+    text-align: center;
+    /* to evenly distribute the tab bar buttons*/
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: relative;
+    margin: 0px;
+}
+
+#chat-bar #emojis-button #emojis {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding: 16px;
 }
