@@ -20,9 +20,20 @@ body {
 /* # sweat #uppercase buttons and w3w locations */
 button, strong {
     text-transform: uppercase;
-    color: black;
 }
 
+small a {
+/*changing link color to Primary text (Black)*/
+    color: white;
+    text-transform: uppercase;
+}
+
+#chat-app-bar small img {
+/* Adding filled star to the right of the channel app bar*/
+position: static;
+vertical-align: middle;
+right: 0px;
+}
 
 
 /* APP BAR */

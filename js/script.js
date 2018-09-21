@@ -1,5 +1,8 @@
 
-function switchChannel(channelName) {
-    document.getElementById('#chat-app-bar').innerHTML='Tuning into channel' + document.getElementById.param(Yummy) + 'by' + 'upgrading.never.helps';
+function switchChannel() {
+    document.getElementById('#chat-app-bar').innerHTML='Tuning into channel' + channelName + 'by' + 'upgrading.never.helps';
 }
-console.log(switchChannel);
+
+function switchAppstar() {
+    document.getElementById('#chat-app-bar').src="http://ip.lfe.mw.tum.de/sections/star.png";
+}
