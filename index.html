@@ -10,6 +10,8 @@
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="js/script.js"> </script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"> </script>
+   
     
 </head>
 <body>
@@ -67,17 +69,17 @@
     <!-- #4 #sweat #tab-bar -->
     <div id="tab-bar">
         <!-- #4 #tab-bar selected channel should be #highlighted -->
-        <button class="selected">
+        <button id="new" class="selected" onclick="selectTab()">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
         </button>
-        <button>
+        <button id="trend" onclick="selectTab()">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
             Trending
         </button>
-        <button>
+        <button id="favourite" onclick="selectTab()">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
             Favorites
@@ -93,7 +95,7 @@
             <a href="http://w3w.co/cheeses.yard.applies" target="_blank">
                 cheeses.yard.applies
             </a>
-            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+            <img id="app-star" src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred" onclick="switchAppStar()">
         </small>
         
     </h1>
