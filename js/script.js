@@ -13,3 +13,12 @@ function selectTab(TabId) {
 }
 console.log('Changing to tab');
 console.log('app is live');
+
+function hideEmoji() {
+    $('#emojis').hide();
+}
+
+
+function showEmoji() {
+    $('#emojis').show();
+}
