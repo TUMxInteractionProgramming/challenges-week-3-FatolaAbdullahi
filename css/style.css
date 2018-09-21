@@ -1,23 +1,23 @@
-/* #4 #sweat #external css file */
+/*#external css file */
 
-/* GLOBAL */
+/*GLOBAL */
 
-/* #4 #global styles*/
+/*#global styles*/
 
 * {
-    /* #4 use #roboto #font */
+    /* use #roboto #font */
     font-family: 'Roboto', 'Arial', sans-serif;
 
-     /* #4 #sweat take care of #spacing between various elements */
-    margin: 0;
-    padding: 0;
+     /* #sweat take care of #spacing between various elements */
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
     background-color: #F5F5F5;
 }
 
-/* #4 # sweat #uppercase buttons and w3w locations */
+/* # sweat #uppercase buttons and w3w locations */
 button, strong {
     text-transform: uppercase;
 }
@@ -26,7 +26,7 @@ button, strong {
 
 /* APP BAR */
 
-/* #4 #sweat address both #app-bar s */
+/* #sweat address both #app-bar s */
 h1 {
     background-color: #3F51B5;
     color: white;
@@ -40,111 +40,63 @@ h1 {
 }
 
 
+/* DESIGN OF NEW LAYOUTS FOR OUR CHATTER APP */
+
+/* LEFT Layout OF Channel area */
+
 /* CHANNELS LIST */
 
-/* #4 #sweat #channels */
+/* #sweat #channels */
 ul {
-    /* #3 #channels #list modifies h2 to ul */
+    /* #channels #list modifies h2 to ul */
     background-color: white;
-    /* #3 #channels #bullets removed */
+    /* #channels #bullets removed */
     list-style-type: none;
     margin-top: 70px;
     margin-bottom: 0px;
 }
 
 li {
-    /* #4 #channel #tile geometry */
+    /* #channel #tile geometry */
     box-sizing: content-box;
     height: 48px;
     line-height: 48px;
     font-size: 16px;
-    /* #4 #channel tiles are separated by #lines */
+    /* #channel tiles are separated by #lines */
     border-bottom: 1px solid #F5F5F5; 
 }
 
-/* #4 active #channel is #highlighted */
+/* active #channel is #highlighted */
 li.selected {
     color: #3F51B5;
     border-left: 4px solid #3F51B5;
 }
 
 
-/* #4 add styles to #tab-bar #buttons */
+/* add styles to #tab-bar #buttons */
 #tab-bar button {
     background-color: white;
     border: none;
     font-size: 13px;
 
-    /* #4 #tab-bar buttons have a width of #one-third of the available space */
+    /* #tab-bar buttons have a width of #one-third of the available space */
     width: 33%;
     height: 72px;
     padding: 16px;
 }
 
-/* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
+/* #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
 #tab-bar button img {
     display: block;
     margin: 0 auto 4px auto;
 }
 
-/* #4 the selected #tab-bar #button is #highlighted */
+/* the selected #tab-bar #button is #highlighted */
 #tab-bar button.selected {
     color: #3F51B5;
     border-bottom: 4px solid #3F51B5;
 }
 
-
-/* MESSAGES */
-/* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
-.message {
-    /* #3 #chat #width*/
-    width: 80%;
-
-    /* #4 align all #messages using #margins */
-    margin-left: 2.5%;
-
-    /* #4 #message distance to next message container*/
-    margin-bottom: 8px;
-    position: relative;
-    top: 70px;
-}
-
-
-.message h3 {
-    font-size: medium;
-}
-
-.message h3 em {
-    font-size: larger;
-    font-style: normal;
-}
-
-.message h3 a {
-    /* #3 #chat #link color is primary text */
-    color: black;
-}
-
-.message p {
-    background-color: white;
-    padding: 16px;
-}
-
-.message button {
-    background-color: #CDDC39;
-    color: black;
-    text-transform: uppercase;
-}
-
-/* #4 left align own #messages using #margins */
-.message.own {
-    margin-left: 17.5%;
-}
-
-
-
-/* DESIGN OF NEW LAYOUTS FOR OUR CHATTER APP */
-
-/* LEFT Layout OF Channel area */
 #channels {
 /*for the */
     position: absolute;
@@ -173,77 +125,139 @@ li.selected {
     position: absolute;
     right: 8px;
     vertical-align: middle;
-    display: inline;
-    margin: 0px;
+    display: inline; 
 }
 
 
 /* RIGHT Layout OF Chats area */
+
+
 #chat {
-/* for the chat area layout*/
-    position: absolute;
-    left: 40%;
-    width: 60%;
-    height: 100%;
-    overflow: auto;
+    /* for the chat area layout*/
+        position: absolute;
+        left: 40%;
+        width: 60%;
+        height: 100%;
+        overflow: auto;
+    }
+    
+    #chat h1 {
+    /* for right app bar */
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    position: fixed;
+    }
+    
+    .message button {
+    /*Placing message time left button on right with position*/
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        display: inline;
+    }
+    
+    .message h3 {
+    /* to display metadata evenly and aligned to bottom*/
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex: 1; 
+        text-align: center;
+    }
+    
+    .message a{
+    /* creating a column for locations*/
+        width: 40%;
+        text-align: left;
+    }
+    
+    .message em {
+    /* creating a column for time left*/
+        width: 25%;
+        text-align: right;
+    }
+    
+    /* TAB BAR */
+    
+    
+    /* #sweat #tab-bar */
+    #tab-bar, #chat-bar {
+        /* #tab-bar #container should be white */
+        background-color: white;
+        /* #tab-bar #container has all buttons centered */
+        text-align: center;
+        /* to evenly distribute the tab bar buttons*/
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 0px;
+        flex: 1;
+        width: 100%;
+        left: 0;
+    }
+    
+      #emojis {
+        /*Emojis box*/
+        display: flex;
+        justify-content: initial;
+        background-color: white;
+        padding: 16px;
+        border: 1px solid black;
+        height: 300px;
+        width: 300px;
+        font-size: 28px;
+        text-align: left;
+        overflow: auto;
+        position: absolute;
+        left: 16px;
+        bottom: 284px;
+    }
+    
+/* MESSAGES */
+/* select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
+.message {
+    /* #chat #width*/
+    width: 80%;
+
+    /* align all #messages using #margins */
+    margin-left: 2.5%;
+
+    /* #message distance to next message container*/
+    margin-bottom: 8px;
+    position: relative;
+    top: 70px;
 }
 
-#chat h1 {
-/* for right app bar */
-padding-left: 20px;
-padding-right: 20px;
- width: 100%;
- position: fixed;
+
+.message h3 {
+    font-size: medium;
+}
+
+.message h3 em {
+    font-size: larger;
+    font-style: normal;
+}
+
+.message h3 a {
+    /* #chat #link color is primary text */
+    color: black;
+}
+
+.message p {
+    background-color: white;
+    padding: 16px;
 }
 
 .message button {
-/*Placing message time left button on right with position*/
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
-    display: inline;
+    background-color: #CDDC39;
+    color: black;
+    text-transform: uppercase;
 }
 
-.message h3 {
-/* to display metadata evenly and aligned to bottom*/
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex: 1;   
-}
-
-.message a{
-/* creating a column for locations*/
-    width: 33%;
-}
-
-.message em {
-/* creating a column for time left*/
-    width: 33%;
-    text-align: right;
-}
-
-/* TAB BAR */
-
-
-/* #4 #sweat #tab-bar */
-#tab-bar, #chat-bar {
-    /* #3 #tab-bar #container should be white */
-    background-color: white;
-    /* #3 #tab-bar #container has all buttons centered */
-    text-align: center;
-    /* to evenly distribute the tab bar buttons*/
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    position: relative;
-    margin: 0px;
-}
-
-#chat-bar #emojis-button #emojis {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    padding: 16px;
+/* left align own #messages using #margins */
+.message.own {
+    margin-left: 17.5%;
 }
